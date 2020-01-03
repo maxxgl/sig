@@ -6,7 +6,7 @@ document.addEventListener('scroll', () => {
 });
 
 // Countdown Timer ===================================================
-const RACE_START = Date.parse('Jan 16 2020 10:00 GMT+0900');
+const RACE_START = Date.parse('Feb 16 2020 10:00 GMT+0900');
 const COUNTDOWN = document.getElementById('countdown-body')
 
 setInterval(() => {
@@ -17,21 +17,9 @@ setInterval(() => {
   const days = Math.floor( DELTA/(1000*60*60*24) );
 
   COUNTDOWN.innerHTML = `
-    <tr>
-      <td>${days}</td>
-      <td>Day${days === 1 ? '' : 's'}</td>
-    </tr>
-    <tr>
-      <td>${hours}</td>
-      <td>Hour${hours === 1 ? '' : 's'}</td>
-    </tr>
-      <tr>
-      <td>${minutes}</td>
-      <td>Minute${minutes === 1 ? '' : 's'}</td>
-    </tr>
-    <tr>
-      <td>${seconds}</td>
-      <td>Second${seconds === 1 ? '' : 's'}</td>
-    </tr>
+    <span>${days < 10 ? '0' : ''}${days}:</span>
+    <span>${hours < 10 ? '0' : ''}${hours}:</span>
+    <span>${minutes < 10 ? '0' : ''}${minutes}:</span>
+    <span>${seconds < 10 ? '0' : ''}${seconds}</span>
   `;
 }, 1000);
