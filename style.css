@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 
 :root {
-  --primary-color: rgb(40, 57, 97);
+  /* --primary-color: rgb(40, 57, 97); */
   --snow: rgb(220, 231, 256);
-  --pink: #f7d1cd;
+  --primary-color: #f7d1cd;
+  --secondary-color: #fdf5bf;
 }
 
 body {
   margin: 0;
   padding: 0;
-
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
-
   width: 100%;
   height: 100%;
 }
@@ -28,7 +27,7 @@ header {
 }
 
 header a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -37,8 +36,7 @@ html[data-scroll='0'] header {
 }
 
 html[data-scroll='0'] a {
-  color: black;
-  text-shadow: 2px 0px 7px var(--snow);
+  text-shadow: 2px -2px 8px var(--snow), 1px 0px 4px var(--snow);
 }
 
 nav {
@@ -59,31 +57,39 @@ main {
 }
 
 section > h1 {
-  margin-top: 0;
+  margin: 0;
+  margin-bottom: .25em;
 }
 
-section#blurb, section#countdown {
+section#blurb, section#countdown, section#blog {
   padding: 1em;
   padding-bottom: 2em;
 }
 
-#blurb {
-  background: var(--snow);
-  min-height: 24%;
+#blurb, #blog {
+  background: var(--secondary-color);
 }
 
 #blurb > h1 {
   font-size: 2.5em;
-  margin: 0;
 }
 
-.flavor-images {
-  
+.flavor-images img {
+  width: 100%;
+}
+
+#countdown-body {
+  font-size: 1.25em;
+}
+
+#countdown-body td:first-child {
+  text-align: right;
+  width: 1.5em;
+  padding-right: .5em;
 }
 
 footer {
   padding: .5em;
   text-align: center;
   background: var(--primary-color);
-  color: white;
 }
