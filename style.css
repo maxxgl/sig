@@ -21,10 +21,10 @@ body {
 
 header {
   position: fixed;
-  width: calc(100% - 1em);
+  width: 100%;
   top: 0;
   left: 0;
-  padding: .5em;
+  padding: .5em 0;
   transition: background .25s ease-in, color .25s ease-in;
   background: var(--primary-color);
 }
@@ -38,7 +38,7 @@ html[data-scroll='0'] header {
   background: transparent;
 }
 
-html[data-scroll='0'] a {
+html[data-scroll='0'] header a {
   text-shadow: 2px -2px 8px var(--snow), 1px 0px 4px var(--snow);
   color: black;
 }
@@ -48,16 +48,16 @@ nav {
   justify-content: space-around;
 }
 
-main {
-  font-size: 1.5em;
-}
-
 #hero > img {
   overflow: hidden;
   align-content: center;
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+section {
+  font-size: 1.5em;
 }
 
 section > h1 {
@@ -107,4 +107,46 @@ footer {
   text-align: center;
   background: var(--primary-color);
   color: white;
+}
+
+@media (min-width: 550px) {
+  body {
+    display: grid;
+    height: 100vh;
+    grid-template:
+      "hero nav" min-content
+      "hero main"
+      / min-content 1fr;
+  }
+
+  #hero {
+    grid-area: hero;
+    height: 100vh;
+  }
+
+  #hero img {
+    height: 100vh;
+    width: auto;
+    max-width: 50vw;
+  }
+
+  header {
+    /* all: unset; */
+    position: relative;
+    grid-area: nav;
+  }
+
+  html[data-scroll='0'] header {
+    background: var(--primary-color) !important;
+  }
+  
+  html[data-scroll='0'] header a {
+    text-shadow: none;
+    color: white;
+  }
+  
+  main {
+    grid-area: main;
+    overflow-y: scroll;
+  }
 }
