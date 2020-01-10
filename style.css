@@ -67,7 +67,7 @@ section > h1 {
   margin-bottom: .25em;
 }
 
-section#blurb, section#countdown, section#blog {
+section:not(.flavor-images) {
   padding: 1em;
 }
 
@@ -114,7 +114,7 @@ footer {
     display: grid;
     height: 100vh;
     grid-template:
-      "hero nav" min-content
+      "hero nav" max-content
       "hero main"
       / min-content 1fr;
   }
@@ -147,6 +147,12 @@ footer {
   
   main {
     grid-area: main;
-    overflow-y: scroll;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section.grow {
+    flex-grow: 1;
   }
 }
