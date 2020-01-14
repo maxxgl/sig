@@ -67,6 +67,11 @@ section > h1, section > h2 {
   margin-bottom: .25em;
 }
 
+section > h2 {
+  font-size: 1.1em;
+  margin-bottom: .5em;
+}
+
 section:not(.flavor-images) {
   padding: 1em;
 }
