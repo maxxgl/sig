@@ -129,6 +129,15 @@ main.blog-main {
   padding-top: 2em;
 }
 
+/* SPONSORS *******************************************************************/
+#sponsorship-links {
+  padding-top: .5em;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  text-align: center;
+}
+
+/* QUERIES ********************************************************************/
 @media (min-width: 550px) {
   body {
     display: grid;
