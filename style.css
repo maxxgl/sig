@@ -114,6 +114,11 @@ footer {
   color: white;
 }
 
+.news-link {
+  display: block;
+  padding-bottom: .75em;
+}
+
 /* BLOG ***********************************************************************/
 .skinny {
   margin: 0 auto;
