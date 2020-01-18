@@ -142,6 +142,25 @@ main.blog-main {
   text-align: center;
 }
 
+form {
+  margin-block-end: -0.5em;
+}
+
+#business-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#business-logos > div {
+  margin-top: 1em;
+}
+
+#friends {
+  /* columns: 2; */
+}
+
 /* QUERIES ********************************************************************/
 @media (min-width: 550px) {
   body {
